@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dragon Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+    <style>
+        body{
+            background-image: url('https://stmed.net/sites/default/files/dragon-wallpapers-28125-6381303.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            height: 100%;
+            width: 100vw;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 90%;
+            max-height: 90%;
+            border: 5px solid #222222;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: rgba(188, 188, 188, 0.5);
+        }
+        .player, .dragon, .log {
+            flex: 0 1 auto;
+            justify-content: center;
+            padding: 2em;
+            max-height: 26vh;
+        }
+        .log {
+            min-width: 20vw;
+            padding: 10px;
+            overflow-y: scroll;
+        }
+        button{
+            color: #222;
+            background-color: rgba(188, 188, 188, 0.5);
+            margin: 5px 5px 0 0;
+            width: 750px;
+        }
+        #myProgress, #dragonProgress {
+            width: 750px;
+            background-color: grey;
+        }
+        #myBar, #dragonBar {
+            width: 1%;
+            height: 30px;
+            background-color: #ce0000;
+        }
+        .attackBtn {
+            width: 150px;
+            background-color: whitesmoke;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="player">
+            <h1>Player</h1>
+            <div class="playerHP"></div>
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+        </div>
+
+        <div class="dragon">
+            <h1>Dragon</h1>
+            <div class="dragonHP"></div>
+            <div id="dragonProgress">
+                <div id="dragonBar"></div>
+            </div>
+        </div>
+        <div class="log">
+
+        </div>
+    </div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
